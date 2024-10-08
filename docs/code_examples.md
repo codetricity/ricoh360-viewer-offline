@@ -14,7 +14,9 @@ Reference: [RICOH Viewer Local Sample Code Guide](https://www.notion.so/ricoh360
 
 ## ricoh360-viewer.js
 
-JS included with the platform, download and install: https://r360pf-prod-static.s3.us-west-2.amazonaws.com/viewer/v0.14.0/ricoh360-viewer.js
+JS included with the platform, download and install: https://r360pf-prod-static.s3.us-west-2.amazonaws.com/viewer/v0.15.0/ricoh360-viewer.js
+
+Release Notes: [Check for latest versions here](https://www.notion.so/ricoh360/6ad4fe7a4a114ad0bf611c936d70554e).
 
 ## index.html
 
@@ -225,4 +227,4 @@ func sha256HashToString(data: Data) -> String {
 
 ## Check Operation on Actual Device
 
-![operation on actual device](images/local_viewer_video.gif){width=50%}
+![operation on actual device](images/local_viewer_video.gif)
