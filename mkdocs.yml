@@ -14,11 +14,12 @@ plugins:
   #     author: Oppkey
   #     copyright: © Oppkey 2024
   #     cover_title: RICOH360 Viewer Local Install
-  #     cover_subtitle: community document
+  #     cover_subtitle: community document - last updated Oct 7, 2024
 
 
 nav:
   - Home: index.md
+  - Example: code_examples.md
 
 markdown_extensions:
   - admonition
