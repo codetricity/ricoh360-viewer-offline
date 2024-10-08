@@ -1,4 +1,4 @@
-# Using RICOH360 Viewer On-site with no Internet in your own iOS application
+# Using RICOH360 Viewer On-site with no Internet
 
 ![overview](images/overview_offline.png)
 
@@ -38,6 +38,12 @@ The library can be installed by appending the following to the podfile and execu
     A maven package is available for Android, but the documentation is still
     in progress.
 
+### Viewer Versions
+
+Viewer versions are listed [here](https://www.notion.so/ricoh360/6ad4fe7a4a114ad0bf611c936d70554e)
+
+As of October 7, 2024, the most recent viewer version is v0.15.0.
+
 ## Viewer Setup Steps
 
 1. Copy local files to the Document Directory (Documents) in your application
@@ -47,18 +53,21 @@ The library can be installed by appending the following to the podfile and execu
 
 ## Viewer Setup Overview
 
-The viewer setup for offline mobile app use differs from online use.
-The transforms should be done when the viewer is online.  
+The viewer setup for offline mobile apps  differs from online use.
+For offline use, the Private Key is not required.  If you are
+switching between online and offline use, you will need a Private Key
+from RICOH.
+
+The transforms should be done when the viewer is online.
 
 ![viewer setup overview](images/viewer_setup.png)
 
 In the diagram above, the developer should create the `show()` function themselves
 and have it execute either `viewer.start({filePath})` or `viewer.switchScene({filePath})`.
 
-!!! warning Features limited in offline mode
-    During your evaluation, make sure you are referring to the correct
-    technical documentation.  The API and features for offline and online mode are different.
-    We recommend that you evaluate offline mode in parallel to online mode.
+During your evaluation, make sure you are referring to the correct
+technical documentation.  The API and features for offline and online mode are different.
+We recommend that you evaluate offline mode in parallel to online mode.
 
 ## Online Viewer
 
@@ -67,3 +76,8 @@ in your iOS application.
 
 The document refers to a backend server. An [example backend server](https://github.com/theta360developers/oppkey-ricoh-viewer-demo-basic) and web application is
 available in the community.
+
+!!! tip
+    The online viewer is often used with the RICOH360 Cloud service to manage content.
+    The RICOH360 Cloud API requires a Secret Key that is different from the Private
+    Key used with the RICOH360 Viewer.
