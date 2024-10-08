@@ -1,4 +1,8 @@
 site_name: RICOH360 Viewer Local Install
+site_url: https://codetricity.github.io/ricoh360-viewer-offline/
+site_author: Oppkey
+copyright: © Oppkey 2024
+
 theme:
   name: material
 
@@ -6,6 +10,12 @@ plugins:
   - search
   - encryptcontent:
       global_password: 'RicohViewerRocks'
+  # - with-pdf:
+  #     author: Oppkey
+  #     copyright: © Oppkey 2024
+  #     cover_title: RICOH360 Viewer Local Install
+  #     cover_subtitle: community document
+
 
 nav:
   - Home: index.md

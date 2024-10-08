@@ -33,7 +33,6 @@ The library can be installed by appending the following to the podfile and execu
 
 `pod 'RICOH360Viewer', :podspec => 'https://r360pf-prod-static.s3.us-west-2.amazonaws.com/libs/cocoapods/ricoh360-viewer/v0.3.0/RICOH360Viewer.podspec'`
 
-
 !!! info
     A maven package is available for Android, but the documentation is still
     in progress.
