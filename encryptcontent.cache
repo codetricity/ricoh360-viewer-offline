@@ -1,0 +1,5 @@
+kdf_iterations: 10000
+obfuscate: {}
+password:
+  RicohViewerRocks: 2654344d817f21c31aba0d503d344f0ed0630da6f5caa708a8e0f80360d65ee4;b27f5753062ffcbf0f59d70e6f6bc79f;c4a95ee1bbbf30aeacb132f6fbb594102bba10bb1b7584868e49eaefed4dff06
+userpass: {}
