@@ -2,6 +2,12 @@
 
 [RICOH Viewer Local Sample Code guide in Japanese](https://www.notion.so/ricoh360/2024-08-28-Swift-06dff572af57443b859a4d760c267195)
 
+- 表示用のhtmlとplatformから提供されたjsをアプリ内に梱包しておく
+- 上記htmlとjsおよびローカルの画像が同じフォルダ内にある状態でviewerに読み込ませるとローカルの画像を再生できる
+
+## local viewer code
+
+![local files](images/local_files.png)
 
 ## index.html
 
