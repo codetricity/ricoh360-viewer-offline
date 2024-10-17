@@ -1,9 +1,5 @@
 # Code Examples
 
-Reference: [RICOH Viewer Local Sample Code Guide](https://www.notion.so/ricoh360/2024-08-28-Swift-06dff572af57443b859a4d760c267195) (in Japanese)
-
-## Overview
-
 - Use WebView to display local images in the viewer
 - Package HTML for display and the JS provided by the platform into the app
 - If you load the above html, JS, and local image in the same folder into the viewer, you can view the local image.
@@ -14,7 +10,7 @@ Reference: [RICOH Viewer Local Sample Code Guide](https://www.notion.so/ricoh360
 
 ## ricoh360-viewer.js
 
-JS included with the platform, download and install: https://r360pf-prod-static.s3.us-west-2.amazonaws.com/viewer/v0.15.0/ricoh360-viewer.js
+JS included with the platform, download and install: <https://r360pf-prod-static.s3.us-west-2.amazonaws.com/viewer/v0.15.0/ricoh360-viewer.js>
 
 Release Notes: [Check for latest versions here](https://www.notion.so/ricoh360/6ad4fe7a4a114ad0bf611c936d70554e).
 
