@@ -30,7 +30,7 @@ offline and online mobile applications.
 
 Viewer versions are listed [here](https://ricoh360.notion.site/Release-Notes-a3f8cdc266de4bd38411f5a032d5b673)
 
-As of October 7, 2024, the most recent viewer version is v0.15.0.
+As of October 17, 2024, the most recent viewer version is v0.15.0.
 
 ## Viewer Setup Steps
 
