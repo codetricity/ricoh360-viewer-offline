@@ -28,7 +28,7 @@ offline and online mobile applications.
 
 ### Viewer Versions
 
-Viewer versions are listed [here](https://www.notion.so/ricoh360/6ad4fe7a4a114ad0bf611c936d70554e)
+Viewer versions are listed [here](https://ricoh360.notion.site/Release-Notes-a3f8cdc266de4bd38411f5a032d5b673)
 
 As of October 7, 2024, the most recent viewer version is v0.15.0.
 
