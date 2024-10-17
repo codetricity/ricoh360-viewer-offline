@@ -26,17 +26,6 @@ offline and online mobile applications.
 
 ![sample images](images/sample_images.png)
 
-### Using CocoaPods
-
-RICOH360 Viewer for iOS is available as a CocoaPods library.
-The library can be installed by appending the following to the podfile and executing the `pod install` command.
-
-`pod 'RICOH360Viewer', :podspec => 'https://r360pf-prod-static.s3.us-west-2.amazonaws.com/libs/cocoapods/ricoh360-viewer/v0.3.0/RICOH360Viewer.podspec'`
-
-!!! info
-    A maven package is available for Android, but the documentation is still
-    in progress.
-
 ### Viewer Versions
 
 Viewer versions are listed [here](https://www.notion.so/ricoh360/6ad4fe7a4a114ad0bf611c936d70554e)
@@ -80,3 +69,7 @@ available in the community.
     The online viewer is often used with the RICOH360 Cloud service to manage content.
     The RICOH360 Cloud API requires a Secret Key that is different from the Private
     Key used with the RICOH360 Viewer.
+
+!!! info
+    A maven package is available for Android, but the documentation is still
+    in progress.
