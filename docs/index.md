@@ -12,6 +12,10 @@ magically in your local app.  Or, the viewer can be built into your mobile
 app with an iOS Podfile.  Using WebView, the RICOH360 Viewer can work in both
 offline and online mobile applications.
 
+## Video Demonstration
+
+[RICOH360 Viewer With Local Images When Offline](https://youtu.be/0sTO38q53Ro)
+
 ## Preparation to Display Local Files
 
 * `ricoh360-viewer.js`: RICOH360 viewer library for 360-degree images

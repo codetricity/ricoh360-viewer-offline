@@ -1,10 +1,16 @@
 # Code Examples
 
+Full project is available on GitHub.
+
+<https://github.com/codetricity/ricoh360-local-viewer-demo>
+
+## Overview of Steps
+
 - Use WebView to display local images in the viewer
 - Package HTML for display and the JS provided by the platform into the app
 - If you load the above html, JS, and local image in the same folder into the viewer, you can view the local image.
 
-## local viewer code
+## File Structure in Xcode
 
 ![local files](images/local_files.png)
 
