@@ -16,6 +16,8 @@ offline and online mobile applications.
 
 [RICOH360 Viewer With Local Images When Offline](https://youtu.be/0sTO38q53Ro)
 
+![demo gif](images/ricoh360_viewer_local_file_demo.gif)
+
 ## Preparation to Display Local Files
 
 * `ricoh360-viewer.js`: RICOH360 viewer library for 360-degree images
@@ -30,7 +32,13 @@ offline and online mobile applications.
 
 ![sample images](images/sample_images.png)
 
-### Viewer Versions
+### Transferring files into iOS simulator
+
+Drag and drop files into simulator.
+
+![add to simulator](images/simulator/add_images_to_simulator.png)
+
+## Viewer Versions
 
 Viewer versions are listed [here](https://ricoh360.notion.site/Release-Notes-a3f8cdc266de4bd38411f5a032d5b673)
 
@@ -60,6 +68,19 @@ and have it execute either `viewer.start({filePath})` or `viewer.switchScene({fi
 During your evaluation, make sure you are referring to the correct
 technical documentation.  The API and features for offline and online mode are different.
 We recommend that you evaluate offline mode in parallel to online mode.
+
+## Using Viewer
+
+After saving RICOH THETA images to the camera roll, select an image
+for the viewer. 
+
+![camera roll selection](images/simulator/cameraroll.png)
+
+!!! warning
+    11K images did not work in the simulator in our test. The images work
+    fine in a physical device. For simulator testing, you may need to use
+    the 5.5K images from the X or the 6.7K JPEG image from the Z1.
+
 
 ## Online Viewer
 
