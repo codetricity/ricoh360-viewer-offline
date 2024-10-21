@@ -1,0 +1,638 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Oppkey">
+      
+      
+        <link rel="canonical" href="https://codetricity.github.io/ricoh360-viewer-offline/">
+      
+      
+      
+        <link rel="next" href="code_examples/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>RICOH360 Viewer Local Install</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-ricoh360-viewer-on-site-with-no-internet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="RICOH360 Viewer Local Install" class="md-header__button md-logo" aria-label="RICOH360 Viewer Local Install" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RICOH360 Viewer Local Install
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              [Protected] Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="RICOH360 Viewer Local Install" class="md-nav__button md-logo" aria-label="RICOH360 Viewer Local Install" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RICOH360 Viewer Local Install
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    [Protected] Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    [Protected] Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Demonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-to-display-local-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation to Display Local Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation to Display Local Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-into-ios-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transferring files into iOS simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewer Versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-viewer-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Viewer Setup Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-viewer-setup-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Viewer Setup Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-viewer-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Viewer Offline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Viewer Offline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulator-with-11k-images-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulator with 11K Images Workarounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-switching-local-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Switching Local Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Viewer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="code_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="physical_device/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Physical Device
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Demonstration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-to-display-local-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation to Display Local Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation to Display Local Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-into-ios-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transferring files into iOS simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewer Versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-viewer-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Viewer Setup Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-viewer-setup-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offline Viewer Setup Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-viewer-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Viewer Offline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Viewer Offline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulator-with-11k-images-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulator with 11K Images Workarounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-switching-local-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Switching Local Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Viewer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div id="mkdocs-encrypted-content" style="display:none">i9sp3Fode7PJXT46bsc6iw==;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</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "ricoh360-viewer-offline/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["RF4g+kBYHnUDQm8WWMx5Xw==;p8T6U8PRZCUqFMbYnoIj78w9wq2Y4QKkgqESjHWdI2Z4ahGZB7R5ZaDDDc2JHD+vJc9deb9/ObKmR4wE6Us/lZkWtPoa4zHu5BrIMRcQWxByis5fTuN29B3bwrhOIV4p;sn9XUwYv/L8PWdcOb2vHnw=="];
+var encryptcontent_obfuscate = 0;
+
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
+<script type="text/javascript" src="./assets/javascripts/decrypt-contents.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Oppkey 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
