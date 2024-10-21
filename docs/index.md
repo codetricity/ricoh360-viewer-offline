@@ -44,14 +44,14 @@ Viewer versions are listed [here](https://ricoh360.notion.site/Release-Notes-a3f
 
 As of October 17, 2024, the most recent viewer version is v0.15.0.
 
-## Viewer Setup Steps
+## Offline Viewer Setup Steps
 
 1. Copy local files to the Document Directory (Documents) in your application
 1. Load `index.html` in the `WebView` of your application
 1. Retrieve file paths of local 360-degree images from the Documents directory
 1. Execute functions in `index.html` to display 360-degree images in the WebView
 
-## Viewer Setup Overview
+## Offline Viewer Setup Overview
 
 The viewer setup for offline mobile apps  differs from online use.
 For offline use, the Private Key is not required.  If you are
@@ -69,7 +69,7 @@ During your evaluation, make sure you are referring to the correct
 technical documentation.  The API and features for offline and online mode are different.
 We recommend that you evaluate offline mode in parallel to online mode.
 
-## Using Viewer
+## Using Viewer Offline
 
 After saving RICOH THETA images to the camera roll, select an image
 for the viewer. 
@@ -81,6 +81,14 @@ for the viewer.
     fine in a physical device. For simulator testing, you may need to use
     the 5.5K images from the X or the 6.7K JPEG image from the Z1.
 
+![street image](images/simulator/street.png)
+
+You will be able to switch the image by going back to the camera
+roll and selecting another image.  You do not have to connect to
+the Internet.  You will be able to select many different images
+without having to connect to a network.
+
+![kitchen](images/simulator/kitchen.png)
 
 ## Online Viewer
 
