@@ -31,3 +31,9 @@ in Xcode menu Window -> Devices and Simulators, right-click and then select Unpa
 Unplug physical device, plug it back in. It will take several minutes to sync.
 
 ![ipad sync](images/troubleshoot/ipad_sync.png)
+
+## 11K Images Are Blank in iOS Simulator
+
+It appears that using an Xcode simulator running iOS 18 that THETA X 11K images do not display properly. They show up in the list of images, but not when they are selected. THETA X 5.5K images display properly.
+
+![blank](images/troubleshoot/ios-simulator-11k-blank.png)
