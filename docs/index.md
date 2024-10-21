@@ -81,6 +81,14 @@ for the viewer.
     fine in a physical device. For simulator testing, you may need to use
     the 5.5K images from the X or the 6.7K JPEG image from the Z1.
 
+### Simulator with 11K Images Workarounds
+
+* reduce the size of the image
+  * note that <https://image360.oppget.com/api/> offers different images sizes, including 4K images, which work fine with the simulator
+* use 5.5K THETA X images.
+
+### Viewing and Switching Local Images
+
 ![street image](images/simulator/street.png)
 
 You will be able to switch the image by going back to the camera
