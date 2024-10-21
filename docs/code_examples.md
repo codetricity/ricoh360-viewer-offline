@@ -4,6 +4,12 @@ Full project is available on GitHub.
 
 <https://github.com/codetricity/ricoh360-local-viewer-demo>
 
+1. Clone or download the repo
+1. open folder in Xcode
+1. press play
+
+![Xcode play](images/xcode/xcode_play.jpg)
+
 ## Overview of Steps
 
 - Use WebView to display local images in the viewer

@@ -20,6 +20,8 @@ plugins:
 nav:
   - Home: index.md
   - Example: code_examples.md
+  - Physical Device: physical_device.md
+  - Help: help.md
 
 markdown_extensions:
   - admonition
